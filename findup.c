@@ -1,6 +1,5 @@
 #include "common.h"
 
-
 #include <errno.h>
 #include <libgen.h>
 #include <limits.h>
@@ -42,8 +41,8 @@ int main(int argc, char** argv)
         strcat(p, argv[1]);
         if (access(p, R_OK) == 0) {
             printf("%s\n", p);
-            free(d);
             free(p);
+            free(d);
             return 0;
         }
         strcpy(p, d);
