@@ -45,11 +45,11 @@ int main(int argc, char** argv)
             free(d);
             return 0;
         }
+        if (d[0] == '\0')
+            return 1;
         strcpy(p, d);
         strcpy(d, dirname(p));
         if (strcmp(d, "/") == 0)
-            break;
+            d[0] = '\0';
     }
-
-    return 1;
 }
