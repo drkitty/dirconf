@@ -33,8 +33,7 @@ int main(int argc, char** argv)
         }
     }
 
-    size_t dlen = strlen(d);
-    char* p = malloc(dlen + strlen(argv[1]));
+    char* p = malloc(strlen(d) + 1 + strlen(argv[1]) + 1);
     while (true) {
         strcpy(p, d);
         strcat(p, "/");
